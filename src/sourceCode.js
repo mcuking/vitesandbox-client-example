@@ -39,6 +39,12 @@ const lessCode = `
 body {
   background: #eee;
 }
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 `.trim();
 
 const appCode = `
@@ -46,7 +52,35 @@ import React from 'react';
 
 function App() {
   return (
-    <div>Hello World, ViteSandbox!</div>
+    <div className="container">
+      <h4>Hello World, ViteSandbox!</h4>
+      <div>
+        <svg width="200" height="200" viewBox="-100 -100 200 200">      
+          <g transform="translate(0 5)">
+            <g>
+              <polygon points="0,0 36,-50 0,-100" fill="#EDD8B7" />
+              <polygon points="0,0 -36,-50 0,-100" fill="#E5C39C" />
+            </g>
+            <g transform="rotate(72)">
+              <polygon points="0,0 36,-50 0,-100" fill="#EDD8B7" />
+              <polygon points="0,0 -36,-50 0,-100" fill="#E5C39C" />
+            </g>
+            <g transform="rotate(-72)">
+              <polygon points="0,0 36,-50 0,-100" fill="#EDD8B7" />
+              <polygon points="0,0 -36,-50 0,-100" fill="#E5C39C" />
+            </g>
+            <g transform="rotate(144)">
+              <polygon points="0,0 36,-50 0,-100" fill="#EDD8B7" />
+              <polygon points="0,0 -36,-50 0,-100" fill="#E5C39C" />
+            </g>
+            <g transform="rotate(-144)">
+              <polygon points="0,0 36,-50 0,-100" fill="#EDD8B7" />
+              <polygon points="0,0 -36,-50 0,-100" fill="#E5C39C" />
+            </g>
+          </g>
+        </svg>
+      </div>
+    </div>
   );
 }
 
